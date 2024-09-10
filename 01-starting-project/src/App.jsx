@@ -44,12 +44,30 @@ function App() {
         <section id="examples">
           <h2>Examples</h2>
           <menu>
-            <TabButton onClick={() => clickHandler("components")}>
+            <TabButton
+              isSelected={selectedTopic === "components"}
+              onClick={() => clickHandler("components")}
+            >
               Components
             </TabButton>
-            <TabButton onClick={() => clickHandler("jsx")}>JSX</TabButton>
-            <TabButton onClick={() => clickHandler("props")}>Props</TabButton>
-            <TabButton onClick={() => clickHandler("state")}>State</TabButton>
+            <TabButton
+              isSelected={selectedTopic === "jsx"}
+              onClick={() => clickHandler("jsx")}
+            >
+              JSX
+            </TabButton>
+            <TabButton
+              isSelected={selectedTopic === "props"}
+              onClick={() => clickHandler("props")}
+            >
+              Props
+            </TabButton>
+            <TabButton
+              isSelected={selectedTopic === "state"}
+              onClick={() => clickHandler("state")}
+            >
+              State
+            </TabButton>
           </menu>
           {tabContent}
         </section>
